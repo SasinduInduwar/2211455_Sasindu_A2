@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 10vh;width: 100vw;background-color: aqua;">
+    <button style="float: right; margin-right: 5vw; margin-top: 2vh;" onclick="logPgeView()">Loging</button>
+    </div>
+    <div id="logpage"
+        style="width: 25vw;height: 50vh;background-color: rgb(218, 217, 217);border-radius: 20px;margin-top: 10vh;margin-left: 37.5vw;padding: 1vh  ;padding-left: 1vh ;padding-right: 1vh ;" hidden>
+        <h1 style=" text-align: center;margin-top: 10vh;">Login</h1>
+       
+        <input type="text" id="txtusername" placeholder="User Name">
+        <input type="password" id="txtpassword" placeholder="Password">
+        <button id="login" style="margin-top: 5vh;" onclick="user_check()">Login</button>
+    </div>
+    <script>
+function logPgeView(){
+    document.getElementById("logpage").style.display = "block";
+}
+        let userobj = ({ username: "Test", password: "12345678", email: "testuser@gmail.com" });
+        users.push(userobj);
+  
+        let newUserDicc = localStorage.getItem('userNewData');
+        const newUserlist = JSON.parse(newUserDicc);
+        users.push(newUserlist);
+        // console.log(users)
+        
+    function new_user_add(){
+        
+        
+    let getUserData=localStorage.getItem('new_user_data');
+    console.log(object)
+    users.push(getUserData);
+    console.log(users)
+   
+}
+        console.log(users)
+        let t_username = "";
+        let t_password = "";
+       let msg="";
+function user_check() {
+   
+            t_username = document.getElementById("txtusername").value;
+            t_password = document.getElementById("txtpassword").value;
+            for (var i = 0; i <= users.length; i++) {
+                if (t_username == users[i].username && t_password == users[i].password) {
+                    let t_email = users[i].email;
+                    localStorage.setItem('logingName', t_username);
+                    localStorage.setItem('logingemail', t_email);
+                    var userDataobj = { username: "TestUser", password: "12345678", email: "testuser@gmail.com" };
+                    var myJSON = JSON.stringify(userDataobj);
+                    localStorage.setItem('userDicData',myJSON)
+                   // msg="Sucses";
+                    //console.log("mach")
+                    window.location.assign("index2.html");
+                    break
+                    
+                } else {
+                    
+                    msg="Enter Vaid User";
+                }
+                
+            }
+            // console.log(msg)
+            // alert(msg);
+        }
+    </script>
+</body>
+
+</html>

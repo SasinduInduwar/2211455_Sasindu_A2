@@ -1,0 +1,104 @@
+input[type="text"]{
+    margin-left: 10vh;
+    margin-top:2vh ;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 7px;
+  border-color: rgb(235, 235, 235);
+    font-size: 14pt;
+    background-color: rgb(235, 235, 235);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    background-color: rgb(235, 235, 235);
+
+}
+input[type="password"]{
+    margin-left: 10vh;
+    margin-top:2vh ;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 7px;
+    border-color: rgb(235, 235, 235);
+    font-size: 14pt;
+     background-color: rgb(235, 235, 235);
+}
+input[type="email"]{
+    margin-left: 10vh;
+    margin-top:2vh ;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 7px;
+    border-color: rgb(235, 235, 235);
+    font-size: 14pt;
+     background-color: rgb(235, 235, 235);
+}
+button{
+    margin-left: 10vh;
+    width: 15.5vw;
+    height: 5.5vh;
+    border-radius: 7px; 
+    border: none;
+    background-color: rgb(235, 235, 235);
+ font-size: 15pt;
+}
+.colams{
+    min-height: 200vw;
+    overflow: hidden;
+    display: flex;
+    margin-top: 0 auto;
+   
+    margin-left: 0;
+    
+      
+  }
+        .colam1{
+            width: 20vw;
+            height: 5vw;
+            margin-top: 0;
+            background-color: rgb(245, 248, 242);
+    
+        }
+        .colam2{
+            width: 90vw;
+            height: 5vw;
+            margin-top: 0;
+            background-color: rgb(245, 248, 242);
+            display: inline-block;
+            padding-top: 0;
+        }
+        input[type="email"]:hover {
+           border-color: #121212;
+           border-width: 2px;
+           color: rgb(10, 9, 9);
+          }
+          input[type="text"]:hover {
+            border-color: #121212;
+            border-width: 2px;
+             color: rgb(10, 9, 9);
+           }  
+           input[type="password"]:hover {
+            border-color: #121212;
+            border-width: 2px;
+            color: rgb(10, 9, 9);
+           }   
+           button:hover {
+            background-color: #6fabe3;
+            
+            border-width: 2px;
+             color: white;
+           } 
+           h2:hover {
+            
+            border-width: 2px;
+             color: rgb(245, 8, 8);
+           } 
+           h1:hover {
+            
+            border-width: 2px;
+             color: rgb(12, 8, 245);
+           } 
+         .textboxAria{
+          margin-top: 10vh;
+         }

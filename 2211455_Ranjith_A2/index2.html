@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image.css">
+    <link rel="stylesheet" href="img.css">
+    <script src="index.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 15vh;width: 100vw;
+     background-color: rgb(245, 248, 242);
+    ">
+    <div class="colams">
+        <div class="colam1">
+        <button onclick="logOut_page()" style="margin-top: 2vh;margin-left:2vw;">Log Out</button>
+    </div>
+    <div class="colam2">
+        <div class="profile-pic-div-view">
+            <img src="image.jpg" id="photo">
+            <input type="file" id="file">
+            <!-- <label for="file" id="uploadBtn">Choose Photo</label> -->
+          </div>
+        <h2 id="loggerUsertxt" style="float: right; margin-right: 5vw; margin-top: 2vh;"></h2>
+    </div>
+</div>
+    </div>
+       <div id="createU1" style="width: 25vw;height: 50vh;background-color: rgb(218, 217, 217);border-radius: 20px;margin-top: 10vh;margin-left: 37.5vw;padding: 1vh  ;padding-left: 1vh ;padding-right: 1vh ;">
+        <h1 style="text-align: center;">User Create</h1>
+        
+        <h2 id="usernametxt" style="text-align: center;"></h2>
+        <h2 id="emailtxt" style="text-align: center;"></h2>
+        <br/>
+        <br/>
+        <br/>
+        <button id="ucreate1btn" onclick="createU2_viwe()">Create User</button>
+       </div> 
+       <!-- New user form -->
+       <div id="createU2" style="width: 25vw;height: 60vh;background-color: rgb(218, 217, 217);border-radius: 20px;margin-top: 10vh;margin-left: 37.5vw;padding: 1vh  ;padding-left: 1vh ;padding-right: 1vh ;" hidden>
+        <h1 style="text-align: center;">User Create</h1>
+        <div class="profile-pic-div">
+            <img src="image.jpg" id="photo">
+            <input type="file" id="file">
+            <label for="file" id="uploadBtn">Choose Photo</label>
+          </div>
+          <div class="profile-pic-div-view">
+            <img src="image.jpg" id="photo">
+            <input type="file" id="file">
+            <!-- <label for="file" id="uploadBtn">Choose Photo</label> -->
+          </div>
+          <div  class="textboxAria" style="margin-top: 15vh;">
+ 
+        <h2 id="usernametxtad" style="text-align: center;"></h2>
+        <h2 id="emailtxtad" style="text-align: center;"></h2>
+        <input type="text" id="txtusername" placeholder="User Name">
+        <input type="password" id="txtpassword" placeholder="Password">
+        <input type="email" id="txtuseremail" placeholder="User Email">
+        <br />
+         <br />
+
+
+        <button onclick="addUserData()">Create User</button>
+       </div> 
+       </div>
+ <script>
+    let t_email=localStorage.getItem('logingemail');
+    let t_username=localStorage.getItem('logingName');
+    var objectOutput = localStorage.getItem('userDicData');
+users.push(objectOutput);
+console.log(users)
+    
+       
+    document.getElementById("usernametxt").innerHTML=t_username;
+    document.getElementById("loggerUsertxt").innerHTML=t_username;
+    document.getElementById("usernametxtad").innerHTML=t_username;
+    document.getElementById("emailtxtad").innerHTML=t_email;
+    document.getElementById("emailtxt").innerHTML=t_email;
+    function createU2_viwe() {
+        document.getElementById("createU2").style.display= "block";
+        document.getElementById("createU1").style.display= "none";
+    }
+    function addUserData() {
+        
+     let newUserName = document.getElementById("txtusername").value
+    
+     let newUserPassword = document.getElementById("txtpassword").value
+     
+     let newUseremail = document.getElementById("txtuseremail").value
+    //  console.log(users)
+    //  let newuserobj = ({ username: "Test", password: "12345678", email: "testuser@gmail.com" });
+    //     users.push(newuserobj);
+       
+        let newUserDic = ({ username: newUserName, password: newUserPassword, email: newUseremail });
+  
+        var newUserJSON = JSON.stringify(newUserDic);
+                    localStorage.setItem('userNewData',newUserJSON)
+                    
+     window.location.assign("index.html");
+        
+        newUserCr()
+    }
+    function logOut_page(){
+        window.location.assign("index.html");
+        
+    }
+
+
+</script>
+<script src="app.js"></script>
+</body>
+</html>
